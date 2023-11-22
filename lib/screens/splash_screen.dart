@@ -79,7 +79,7 @@ class SplashScreen extends StatelessWidget {
                         ),
                       ),
                       child: Text(
-                        "Start",
+                        "Start this",
                         style: GoogleFonts.manrope(
                           fontSize: 18,
                         ),
