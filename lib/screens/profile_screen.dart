@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pet_health/controller/ProfileController.dart';
+import 'package:pet_health/controller/auth_controller.dart';
 import 'package:pet_health/view/EditProfileScreen.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final profileController = Get.find<ProfileController>();
+    final ProfileController profileController = Get.put(ProfileController());
+    final AuthController _authController = Get.put(AuthController());
 
     return Scaffold(
       appBar: AppBar(
         title: Text('Profil Anda'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                _authController.logout();
+              },
+              icon: Icon(Icons.exit_to_app)),
+        ],
       ),
       body: Center(
         child: Column(

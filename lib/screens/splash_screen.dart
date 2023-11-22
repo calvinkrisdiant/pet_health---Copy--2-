@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_health/screens/home_screen.dart';
+import 'package:pet_health/view/login_page.dart';
+import 'package:pet_health/view/register_page.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key});
@@ -9,6 +11,22 @@ class SplashScreen extends StatelessWidget {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => HomeScreen(),
+      ),
+    );
+  }
+
+  void navigateToLoginPage(BuildContext context) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => LoginPage(),
+      ),
+    );
+  }
+
+  void navigateToRegisterPage(BuildContext context) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => RegisterPage(),
       ),
     );
   }
@@ -66,10 +84,15 @@ class SplashScreen extends StatelessWidget {
                       height:
                           30, // Ganti ketinggian sesuai kebutuhan (misalnya 30 untuk 3cm)
                     ),
+                    const SizedBox(
+                      height:
+                          30, // Ganti ketinggian sesuai kebutuhan (misalnya 30 untuk 3cm)
+                    ),
                     ElevatedButton(
-                      onPressed: () => navigateToHomeScreen(context),
+                      onPressed: () => navigateToRegisterPage(context),
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF818AF9), // Warna latar belakang
+                        primary: Color.fromARGB(
+                            255, 129, 249, 155), // Warna latar belakang
                         onPrimary: Colors.white, // Warna teks
                         padding: EdgeInsets.symmetric(
                             vertical: 16, horizontal: 32), // Ukuran tombol
@@ -79,7 +102,31 @@ class SplashScreen extends StatelessWidget {
                         ),
                       ),
                       child: Text(
-                        "Start this",
+                        "Sign UP",
+                        style: GoogleFonts.manrope(
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height:
+                          30, // Ganti ketinggian sesuai kebutuhan (misalnya 30 untuk 3cm)
+                    ),
+                    ElevatedButton(
+                      onPressed: () => navigateToLoginPage(context),
+                      style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(
+                            255, 129, 249, 155), // Warna latar belakang
+                        onPrimary: Colors.white, // Warna teks
+                        padding: EdgeInsets.symmetric(
+                            vertical: 16, horizontal: 32), // Ukuran tombol
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.circular(30), // Bentuk tombol bulat
+                        ),
+                      ),
+                      child: Text(
+                        "Sign In",
                         style: GoogleFonts.manrope(
                           fontSize: 18,
                         ),
