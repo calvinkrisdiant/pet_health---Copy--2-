@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "143091808279",
-    "project_id": "modul4-2eebd",
-    "storage_bucket": "modul4-2eebd.appspot.com"
+    "project_number": "774563097068",
+    "project_id": "modul4mobile-598a1",
+    "storage_bucket": "modul4mobile-598a1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:143091808279:android:229f3a475023106dc6c452",
+        "mobilesdk_app_id": "1:774563097068:android:14de687a3af0bf239ef8c9",
         "android_client_info": {
           "package_name": "com.example.pet_health"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBPfopbWJrJJJJ1UeTa8r54VwpPNzr7GTM"
+          "current_key": "AIzaSyCzAB-G0iawNsKeLb-aXl7uogfOqxkuMtE"
         }
       ],
       "services": {

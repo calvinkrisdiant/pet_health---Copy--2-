@@ -44,38 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB_82d2sdQ5xYbv47Xtjuf_xEMOCIUMR2k',
-    appId: '1:143091808279:web:aadea995292ff635c6c452',
-    messagingSenderId: '143091808279',
-    projectId: 'modul4-2eebd',
-    authDomain: 'modul4-2eebd.firebaseapp.com',
-    storageBucket: 'modul4-2eebd.appspot.com',
-    measurementId: 'G-5P8ZLNS394',
+    apiKey: 'AIzaSyBhLCzW39d5ThMh6_Xvd9YmQd34c69OoTU',
+    appId: '1:774563097068:web:caeb1a5b0d553ce29ef8c9',
+    messagingSenderId: '774563097068',
+    projectId: 'modul4mobile-598a1',
+    authDomain: 'modul4mobile-598a1.firebaseapp.com',
+    storageBucket: 'modul4mobile-598a1.appspot.com',
+    measurementId: 'G-V1YKSMHP62',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBPfopbWJrJJJJ1UeTa8r54VwpPNzr7GTM',
-    appId: '1:143091808279:android:229f3a475023106dc6c452',
-    messagingSenderId: '143091808279',
-    projectId: 'modul4-2eebd',
-    storageBucket: 'modul4-2eebd.appspot.com',
+    apiKey: 'AIzaSyCzAB-G0iawNsKeLb-aXl7uogfOqxkuMtE',
+    appId: '1:774563097068:android:14de687a3af0bf239ef8c9',
+    messagingSenderId: '774563097068',
+    projectId: 'modul4mobile-598a1',
+    storageBucket: 'modul4mobile-598a1.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCUoLgJjXePUcy7cckn2H-PlNZEUeI3vlQ',
-    appId: '1:143091808279:ios:328d8f6b348e99ffc6c452',
-    messagingSenderId: '143091808279',
-    projectId: 'modul4-2eebd',
-    storageBucket: 'modul4-2eebd.appspot.com',
+    apiKey: 'AIzaSyC_8LKnQvzGG-isalxt6zTxuuQhoD-4iBY',
+    appId: '1:774563097068:ios:24d5b72926bdeb409ef8c9',
+    messagingSenderId: '774563097068',
+    projectId: 'modul4mobile-598a1',
+    storageBucket: 'modul4mobile-598a1.appspot.com',
     iosBundleId: 'com.example.petHealth',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCUoLgJjXePUcy7cckn2H-PlNZEUeI3vlQ',
-    appId: '1:143091808279:ios:40e7cd0107191bacc6c452',
-    messagingSenderId: '143091808279',
-    projectId: 'modul4-2eebd',
-    storageBucket: 'modul4-2eebd.appspot.com',
+    apiKey: 'AIzaSyC_8LKnQvzGG-isalxt6zTxuuQhoD-4iBY',
+    appId: '1:774563097068:ios:8a5dcfaccdffafcf9ef8c9',
+    messagingSenderId: '774563097068',
+    projectId: 'modul4mobile-598a1',
+    storageBucket: 'modul4mobile-598a1.appspot.com',
     iosBundleId: 'com.example.petHealth.RunnerTests',
   );
 }
