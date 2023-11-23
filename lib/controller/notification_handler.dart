@@ -35,7 +35,9 @@ class FirebaseMessagingHandler {
     });
 
     FirebaseMessaging.instance.getInitialMessage().then((message) {
-      print("terminatedNotification : ${message!.notification?.title}");
+      if (message != null) {
+        print("terminatedNotification : ${message.notification?.title}");
+      }
     });
 
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
