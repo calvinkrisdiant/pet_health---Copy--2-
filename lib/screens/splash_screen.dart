@@ -26,7 +26,7 @@ class SplashScreen extends StatelessWidget {
   void navigateToRegisterPage(BuildContext context) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => RegisterPage(),
+        builder: (context) => SignUpView(),
       ),
     );
   }

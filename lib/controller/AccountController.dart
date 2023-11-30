@@ -1,12 +1,10 @@
-
-
 import 'package:appwrite/appwrite.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:pet_health/controller/ClientController.dart';
 
 class AccountController extends ClientController {
-  Account? account;
+  late Account account;
 
   @override
   void onInit() {
@@ -17,8 +15,8 @@ class AccountController extends ClientController {
 
   Future<void> createAccount(Map<String, dynamic> map) async {
     try {
-      final result = await account!.create(
-        userId: map['userId'],
+      final result = await account.create(
+        userId: map['userID'],
         email: map['email'],
         password: map['password'],
         name: map['name'],
@@ -29,11 +27,11 @@ class AccountController extends ClientController {
     }
   }
 
-  Future<void> createEmailSession(Map<String, dynamic> map) async {
+  Future<void> createEmailSession(String email, String password) async {
     try {
-      final result = await account!.createEmailSession(
-        email: map['email'],
-        password: map['password'],
+      final result = await account.createSession(
+        email: email,
+        password: password,
       );
       print("AccountController:: createEmailSession $result");
     } catch (error) {

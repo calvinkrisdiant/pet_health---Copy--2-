@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
+import 'package:pet_health/screens/image_screen.dart';
 import 'dart:convert';
 import 'dart:io';
 
@@ -250,7 +251,19 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           child: Text('Data Hewan'),
         ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => ImageView (),
+              ),
+            );
+          },
+          child: Text('Tambah Foto Hewan'),
+        ),
       ],
     );
+    
   }
+  
 }
