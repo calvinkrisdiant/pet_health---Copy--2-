@@ -1,12 +1,9 @@
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pet_health/controller/AccountController.dart';
 import 'package:pet_health/controller/auth_controller.dart';
 import 'package:pet_health/screens/home_screen.dart';
 import 'package:pet_health/screens/splash_screen.dart';
-
-// ... (import statements)
 
 class LoginPage extends StatefulWidget {
   @override
@@ -23,7 +20,6 @@ void navigateToHomeScreen(BuildContext context) {
 
 class _LoginPageState extends State<LoginPage> {
   final AuthController _authController = Get.put(AuthController());
-  final AccountController _accountController = Get.put(AccountController());
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
@@ -69,20 +65,22 @@ class _LoginPageState extends State<LoginPage> {
               decoration: InputDecoration(labelText: 'Password'),
             ),
             SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: _authController.isLoading.value
-                  ? null
-                  : () async {
-                      await _accountController.loginAccount(
-                        _emailController.text,
-                        _passwordController.text,
-                      );
-                      navigateToHomeScreen(context);
-                    },
-              child: _authController.isLoading.value
-                  ? CircularProgressIndicator()
-                  : Text('Login'),
-            ),
+            Obx(() {
+              return ElevatedButton(
+                onPressed: _authController.isLoading.value
+                    ? null
+                    : () {
+                        _authController.loginUser(
+                          _emailController.text,
+                          _passwordController.text,
+                        );
+                        navigateToHomeScreen(context);
+                      },
+                child: _authController.isLoading.value
+                    ? CircularProgressIndicator()
+                    : Text('Login'),
+              );
+            }),
           ],
         ),
       ),
