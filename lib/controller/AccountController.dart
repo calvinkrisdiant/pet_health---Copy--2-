@@ -52,11 +52,6 @@ class AccountController extends ClientController {
         password: map['password'],
       );
 
-      // Ambil token akses dari hasil sesi
-      final accessToken = result'\$token';
-
-      // Simpan token akses ke SharedPreferences
-      _prefs.setString('user_token', accessToken);
 
       Get.snackbar('Success', 'Login Successful',
           backgroundColor: Colors.green);

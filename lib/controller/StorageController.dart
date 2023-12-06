@@ -18,7 +18,7 @@ class StorageController extends ClientController {
   Future storeImage(File file) async {
     try {
       final result = await storage!.createFile(
-        bucketId: '656871a497f0043b7247',
+        bucketId: '656ff3f15c731dfc4395',
         fileId: ID.unique(),
         file: InputFile.fromPath(
           path: file.path,
@@ -44,12 +44,12 @@ class StorageController extends ClientController {
   Future<List<String>> listImages() async {
     try {
       final result = await storage!.listFiles(
-        bucketId: '656871a497f0043b7247',
+        bucketId: '656ff3f15c731dfc4395',
       );
       List<String> imageUrls = [];
       for (var file in result.files) {
         String imageUrl = storage!.getFileView(
-          bucketId: '656871a497f0043b7247',
+          bucketId: '656ff3f15c731dfc4395',
           fileId: file.$id,
         ) as String;
         imageUrls.add(imageUrl);

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
+import 'package:pet_health/screens/ApiScreen.dart';
 import 'package:pet_health/screens/image_screen.dart';
 import 'dart:convert';
 import 'dart:io';
@@ -245,21 +246,15 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           child: Text('Baca Artikel'),
         ),
-        ElevatedButton(
-          onPressed: () {
-            fetchDataFromAPI();
-          },
-          child: Text('Data Hewan'),
-        ),
-        ElevatedButton(
+               ElevatedButton(
           onPressed: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => ImageView (),
+                builder: (context) => MyHomePage(),
               ),
             );
           },
-          child: Text('Tambah Foto Hewan'),
+          child: Text('Data Hewan'),
         ),
       ],
     );

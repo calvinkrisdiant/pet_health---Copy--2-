@@ -48,7 +48,7 @@ dependencies:
   google_fonts: ^6.1.0
   feather_icons: ^1.2.0
   image_picker: ^1.0.4
-  provider: ^6.0.5
+  provider: ^6.1.1
   webview_flutter: ^4.4.1
   http: ^1.0.0
   firebase_core: ^2.15.1

@@ -8,7 +8,7 @@ void onInit() {
 super.onInit();
 // appwrite
 const endPoint = "https://cloud.appwrite.io/v1";
-const projectID = "65684a80a9d5866e2e1e";
+const projectID = "656ff2e1f28df97d4dba";
 client.setEndpoint(endPoint).setProject(projectID).setSelfSigned(status: true);
 }
 }
