@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_health/screens/DataModel.dart';
 
-
 class AnimalEdit extends StatefulWidget {
   final Function(Animal) onAnimalAdded;
   final Animal existingAnimal; // New property to store existing Animal data
@@ -17,14 +16,16 @@ class _AnimalEditState extends State<AnimalEdit> {
   late TextEditingController _nameController;
   late TextEditingController _genderController;
   late TextEditingController _spesiesController;
-
+  bool isExpenseFormVisible = false;
 
   @override
   void initState() {
     super.initState();
     _nameController = TextEditingController(text: widget.existingAnimal.name);
-    _genderController = TextEditingController(text: widget.existingAnimal.gender);
-    _spesiesController = TextEditingController(text: widget.existingAnimal.species);
+    _genderController =
+        TextEditingController(text: widget.existingAnimal.gender);
+    _spesiesController =
+        TextEditingController(text: widget.existingAnimal.species);
   }
 
   @override
@@ -65,6 +66,9 @@ class _AnimalEditState extends State<AnimalEdit> {
                 species: _spesiesController.text,
               );
               widget.onAnimalAdded(editedAnimal);
+              setState(() {
+                Navigator.pop(context);
+              });
             },
             child: Text('Edit Animal'),
           ),

@@ -5,6 +5,7 @@ import 'package:pet_health/controller/AccountController.dart';
 
 import 'package:pet_health/screens/home_screen.dart';
 import 'package:pet_health/screens/splash_screen.dart';
+import 'package:pet_health/view/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -82,6 +83,15 @@ class _LoginPageState extends State<LoginPage> {
                     : Text('Login'),
               );
             }),
+            GestureDetector(
+              child: Text('Dont Have Account? '),
+              onTap: () {
+                Navigator.pop(context);
+                MaterialPageRoute(
+                  builder: (context) => SignUpView(),
+                );
+              },
+            ),
           ],
         ),
       ),

@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
 import 'package:pet_health/screens/ApiScreen.dart';
-import 'package:pet_health/screens/image_screen.dart';
 import 'dart:convert';
 import 'dart:io';
 

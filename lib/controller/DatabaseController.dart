@@ -1,7 +1,6 @@
 import 'package:appwrite/appwrite.dart';
 import 'package:appwrite/models.dart';
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
+
 import 'package:pet_health/controller/ClientController.dart';
 import 'package:pet_health/screens/DataModel.dart';
 

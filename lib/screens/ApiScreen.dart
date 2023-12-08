@@ -8,23 +8,6 @@ import 'package:pet_health/view/AddAnimal.dart';
 import 'package:pet_health/view/UpdateAnimal.dart';
 import 'package:provider/provider.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Appwrite CRUD Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
-    );
-  }
-}
-
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -34,12 +17,9 @@ class _MyHomePageState extends State<MyHomePage> {
   bool isExpenseFormVisible = false;
   late List<Document> appwriteAnimal = [];
   late DatabaseController database = DatabaseController();
-  
+
   TextEditingController titleController = TextEditingController();
   TextEditingController authorController = TextEditingController();
-  TextEditingController _nameController = TextEditingController();
-  TextEditingController _amountController = TextEditingController();
-  TextEditingController _dateController = TextEditingController();
 
   List<Map<String, dynamic>> dataList = [];
 
@@ -65,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
- void _editAnimal(Document document) {
+  void _editAnimal(Document document) {
     Get.to(AnimalEdit(
       existingAnimal: Animal(
         name: document.data['namahewan'],
@@ -74,7 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       onAnimalAdded: (editedAnimal) async {
         await database.updateAnimalInAppwrite(document.$id, editedAnimal);
-        fetchAppwriteAnimal(); // Refresh list after edit
+        fetchAppwriteAnimal();
+        toggleExpenseFormVisibility(); // Refresh list after edit
       },
     ));
   }
@@ -95,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _addExpense(Animal animal) async {
     await database.addAnimalToAppwrite(animal);
-    refreshAnimal(); // Perbarui data setelah menambahkan
+    refreshAnimal();// Perbarui data setelah menambahkan
   }
 
   @override
@@ -134,6 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     _editAnimal(document);
                                   },
                                 ),
+                                SizedBox(height: 20),
                                 GestureDetector(
                                   child: Text('Delete'),
                                   onTap: () {
