@@ -1,12 +1,12 @@
 import 'package:appwrite/models.dart';
 import 'package:flutter/material.dart';
-import 'package:appwrite/appwrite.dart';
+
 import 'package:get/get.dart';
-import 'package:pet_health/controller/DatabaseController.dart';
-import 'package:pet_health/screens/DataModel.dart';
-import 'package:pet_health/view/AddAnimal.dart';
-import 'package:pet_health/view/UpdateAnimal.dart';
-import 'package:provider/provider.dart';
+import 'package:pet_health/modules/controller/DatabaseController.dart';
+import 'package:pet_health/modules/screens/DataModel.dart';
+import 'package:pet_health/modules/view/AddAnimal.dart';
+import 'package:pet_health/modules/view/UpdateAnimal.dart';
+
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expense Tracking App'),
+        title: Text('Add Animal Data'),
       ),
       body: SingleChildScrollView(
         child: Column(

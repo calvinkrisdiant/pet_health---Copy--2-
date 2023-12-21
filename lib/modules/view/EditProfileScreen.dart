@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
-import 'package:pet_health/controller/ProfileController.dart';
+import 'package:pet_health/modules/controller/ProfileController.dart';
 
 class EditProfileScreen extends StatefulWidget {
   @override

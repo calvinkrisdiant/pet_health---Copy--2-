@@ -1,16 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pet_health/controller/DatabaseController.dart';
-import 'package:pet_health/controller/auth_controller.dart';
-import 'package:pet_health/controller/notification_handler.dart';
+import 'package:pet_health/modules/controller/DatabaseController.dart';
+import 'package:pet_health/modules/controller/auth_controller.dart';
+import 'package:pet_health/modules/controller/notification_handler.dart';
 import 'package:pet_health/firebase_options.dart';
-import 'package:pet_health/screens/DataModel.dart';
-import 'package:pet_health/screens/home_screen.dart';
-import 'package:pet_health/view/EditProfileScreen.dart';
-import 'package:pet_health/screens/splash_screen.dart';
-import 'package:pet_health/view/login_page.dart';
-import 'package:pet_health/view/register_page.dart';
+import 'package:pet_health/modules/screens/DataModel.dart';
+import 'package:pet_health/modules/screens/home_screen.dart';
+import 'package:pet_health/modules/view/EditProfileScreen.dart';
+import 'package:pet_health/modules/screens/splash_screen.dart';
+import 'package:pet_health/modules/view/login_page.dart';
+import 'package:pet_health/modules/view/register_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -22,7 +22,7 @@ void main() async {
   await Get.putAsync(() async => await SharedPreferences.getInstance());
   await FirebaseMessagingHandler().initPushNotification();
   await FirebaseMessagingHandler().initLocalNotification();
-   Get.put(DatabaseController());
+  Get.put(DatabaseController());
 
   runApp(MyApp());
 }

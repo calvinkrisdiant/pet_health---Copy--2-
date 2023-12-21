@@ -1,5 +1,5 @@
 import 'package:appwrite/appwrite.dart';
-import 'package:pet_health/controller/ClientController.dart';
+import 'package:pet_health/modules/controller/ClientController.dart';
 
 class RealtimeController extends ClientController {
   Realtime? realtime;

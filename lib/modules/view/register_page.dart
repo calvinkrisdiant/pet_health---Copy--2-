@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pet_health/controller/AccountController.dart';
+import 'package:pet_health/modules/controller/AccountController.dart';
 
 
 class SignUpView extends StatelessWidget {

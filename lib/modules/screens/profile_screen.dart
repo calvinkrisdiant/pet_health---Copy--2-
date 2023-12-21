@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pet_health/controller/ProfileController.dart';
-import 'package:pet_health/controller/auth_controller.dart';
-import 'package:pet_health/view/EditProfileScreen.dart';
+import 'package:pet_health/modules/controller/ProfileController.dart';
+import 'package:pet_health/modules/controller/auth_controller.dart';
+import 'package:pet_health/modules/view/EditProfileScreen.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override

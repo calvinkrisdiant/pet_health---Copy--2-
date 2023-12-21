@@ -1,11 +1,10 @@
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pet_health/controller/AccountController.dart';
-
-import 'package:pet_health/screens/home_screen.dart';
-import 'package:pet_health/screens/splash_screen.dart';
-import 'package:pet_health/view/register_page.dart';
+import 'package:pet_health/modules/controller/AccountController.dart';
+import 'package:pet_health/modules/screens/home_screen.dart';
+import 'package:pet_health/modules/screens/splash_screen.dart';
+import 'package:pet_health/modules/view/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override

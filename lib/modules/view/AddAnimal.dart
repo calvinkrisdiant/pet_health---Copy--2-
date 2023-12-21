@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:pet_health/controller/DatabaseController.dart';
-import 'package:pet_health/screens/DataModel.dart';
-import 'package:pet_health/screens/ApiScreen.dart';
+import 'package:pet_health/modules/controller/DatabaseController.dart';
+import 'package:pet_health/modules/screens/DataModel.dart';
+import 'package:pet_health/modules/screens/ApiScreen.dart';
 
 class AddAnimal extends StatefulWidget {
+  
   final Function(Animal) onAnimalAdded;
   AddAnimal({required this.onAnimalAdded});
 
@@ -15,6 +16,7 @@ class AddAnimal extends StatefulWidget {
 }
 
 class _AddAnimalFormState extends State<AddAnimal> {
+  
   final _nameController = TextEditingController();
   final _genderController = TextEditingController();
   final _speciesController = TextEditingController();
@@ -36,14 +38,14 @@ class _AddAnimalFormState extends State<AddAnimal> {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.monetization_on),
+            leading: Icon(Icons.edit),
             title: TextField(
               controller: _genderController,
               decoration: InputDecoration(labelText: 'Jenis Kelamin'),
             ),
           ),
           ListTile(
-            leading: Icon(Icons.date_range),
+            leading: Icon(Icons.edit),
             title: TextField(
               controller: _speciesController,
               decoration: InputDecoration(labelText: 'Spesies'),

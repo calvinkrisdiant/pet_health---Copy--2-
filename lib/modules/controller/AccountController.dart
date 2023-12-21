@@ -1,8 +1,8 @@
 import 'package:appwrite/appwrite.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pet_health/controller/ClientController.dart';
-import 'package:pet_health/view/login_page.dart';
+import 'package:pet_health/modules/controller/ClientController.dart';
+import 'package:pet_health/modules/view/login_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AccountController extends ClientController {
@@ -15,14 +15,22 @@ class AccountController extends ClientController {
   @override
   void onInit() {
     super.onInit();
-    checkLoginStatus();
-    // appwrite
     account = Account(client);
+    checkLoginStatus();
   }
 
   Future<void> checkLoginStatus() async {
-    isLoggedIn.value = _prefs.containsKey('user_token');
+    try {
+      // Periksa status login menggunakan metode getUser
+      //user = await account.get();
+      //isLoggedIn.value = user != null;
+    } catch (error) {
+      print("Error checking login status: $error");
+      isLoggedIn.value = false;
+    }
   }
+
+  
 
   Future<void> createAccount(Map<String, dynamic> map) async {
     try {
@@ -52,7 +60,6 @@ class AccountController extends ClientController {
         password: map['password'],
       );
 
-
       Get.snackbar('Success', 'Login Successful',
           backgroundColor: Colors.green);
       isLoggedIn.value = true;
@@ -65,6 +72,12 @@ class AccountController extends ClientController {
     } finally {
       isLoading.value = false;
     }
+  }
+
+  void logout() {
+    _prefs.remove('user_token');
+    isLoggedIn.value = false;
+    Get.offAllNamed('/login');
   }
 
   void _showErrorDialog(String title, String content) {

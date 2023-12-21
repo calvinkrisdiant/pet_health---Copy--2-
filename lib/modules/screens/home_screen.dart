@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
-import 'package:pet_health/screens/ApiScreen.dart';
+import 'package:pet_health/modules/screens/ApiScreen.dart';
 import 'dart:convert';
 import 'dart:io';
-
-import 'package:pet_health/screens/profile_screen.dart';
-import 'package:pet_health/screens/splash_screen.dart';
-import 'package:pet_health/view/WebViewScreen.dart';
+import 'package:pet_health/modules/screens/profile_screen.dart';
+import 'package:pet_health/modules/screens/splash_screen.dart';
+import 'package:pet_health/modules/view/WebViewScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key});

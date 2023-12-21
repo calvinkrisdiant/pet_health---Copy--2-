@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:pet_health/controller/StorageController.dart';
+import 'package:pet_health/modules/controller/StorageController.dart';
 
 
 class ImageView extends StatefulWidget {

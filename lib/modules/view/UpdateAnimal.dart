@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pet_health/screens/DataModel.dart';
+import 'package:pet_health/modules/screens/DataModel.dart';
 
 class AnimalEdit extends StatefulWidget {
   final Function(Animal) onAnimalAdded;
@@ -45,14 +45,14 @@ class _AnimalEditState extends State<AnimalEdit> {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.monetization_on),
+            leading: Icon(Icons.edit),
             title: TextField(
               controller: _genderController,
               decoration: InputDecoration(labelText: 'Amount'),
             ),
           ),
           ListTile(
-            leading: Icon(Icons.date_range),
+            leading: Icon(Icons.edit),
             title: TextField(
               controller: _spesiesController,
               decoration: InputDecoration(labelText: 'Date'),

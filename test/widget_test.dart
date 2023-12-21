@@ -1,36 +1,36 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-
-/*
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-<<<<<<< Updated upstream
-
-=======
-import 'package:pet_health/main.dart';
->>>>>>> Stashed changes
+import 'package:pet_health/modules/view/AddAnimal.dart';
+ // Sesuaikan dengan path yang sesuai
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MaterialApp());
+  testWidgets('AddAnimal UI Test', (WidgetTester tester) async {
+    // Build AddExpenseForm widget
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: AddAnimal(
+          onAnimalAdded: (expense) {},
+        ),
+      ),
+    ));
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verifikasi bahwa widget AddExpenseForm dan elemennya telah dirender dengan benar
+    expect(find.byType(AddAnimal), findsOneWidget);
+    expect(find.byType(Card), findsOneWidget);
+    expect(find.byType(ListTile), findsNWidgets(4)); // 6 ListTiles
+    expect(find.byType(ElevatedButton), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Coba memasukkan nilai pada TextField dan tekan tombol
+    await tester.enterText(find.byType(TextField).at(0), 'Test Name');
+    await tester.enterText(find.byType(TextField).at(1), 'Test Gender');
+    await tester.enterText(find.byType(TextField).at(2), 'Test Species');
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+
+    // Tekan tombol Add Expense
+ 
+
+// Pastikan teks yang dimasukkan muncul setelah tombol ditekan
+    expect(find.text('Test Name'), findsOneWidget);
+  
   });
 }
-*/

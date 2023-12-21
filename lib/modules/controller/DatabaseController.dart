@@ -1,8 +1,8 @@
 import 'package:appwrite/appwrite.dart';
 import 'package:appwrite/models.dart';
 
-import 'package:pet_health/controller/ClientController.dart';
-import 'package:pet_health/screens/DataModel.dart';
+import 'package:pet_health/modules/controller/ClientController.dart';
+import 'package:pet_health/modules/screens/DataModel.dart';
 
 class DatabaseController extends ClientController {
   late final Databases database;
